@@ -1,14 +1,43 @@
-import { StyleSheet } from 'react-native';
+import {
+  Button,
+  FlatList,
+  Image,
+  ListRenderItem,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
+import { Product, getProducts } from '@/utils/api';
+import { useState } from 'react';
 
 export default function TabTwoScreen() {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  const loadProducts = async () => {
+    const products = await getProducts();
+    setProducts(products);
+  };
+
+  const renderProductItem: ListRenderItem<Product> = ({ item }) => (
+    <TouchableOpacity style={styles.productItem} testID="product-item">
+      <Image style={styles.productImage} source={{ uri: item.image }} />
+      <Text style={styles.productName}>{item.title}</Text>
+      <Text style={styles.productPrice}>${item.price}</Text>
+    </TouchableOpacity>
+  );
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/two.tsx" />
+      <Button title="Load Products" onPress={loadProducts} />
+      <FlatList
+        role="list"
+        data={products}
+        renderItem={renderProductItem}
+        keyExtractor={(item) => item.id.toString()}
+        numColumns={2}
+      />
     </View>
   );
 }
@@ -16,16 +45,29 @@ export default function TabTwoScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#f2f2f2',
   },
-  title: {
-    fontSize: 20,
+  productItem: {
+    flex: 1,
+    margin: 5,
+    padding: 10,
+    borderRadius: 8,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+  },
+  productImage: {
+    width: 100,
+    height: 100,
+    resizeMode: 'contain',
+  },
+  productName: {
+    marginTop: 8,
+    fontSize: 14,
     fontWeight: 'bold',
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+  productPrice: {
+    marginTop: 4,
+    fontSize: 14,
+    color: '#666',
   },
 });
