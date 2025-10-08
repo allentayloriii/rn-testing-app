@@ -35,7 +35,7 @@ exports[`General App Test Renders Tab 1 correctly 1`] = `
       }
     }
   >
-    Galaxies Home
+    Galaxies Feed
   </Text>
   <View
     style={
