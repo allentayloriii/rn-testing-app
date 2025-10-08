@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1759962278697" clover="3.2.0">
-  <project timestamp="1759962278697" name="All files">
+<coverage generated="1759962489334" clover="3.2.0">
+  <project timestamp="1759962489334" name="All files">
     <metrics statements="112" coveredstatements="25" conditionals="30" coveredconditionals="3" methods="30" coveredmethods="12" elements="172" coveredelements="40" complexity="0" loc="112" ncloc="112" packages="8" files="13" classes="13"/>
     <package name="rn-testing-app">
       <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
