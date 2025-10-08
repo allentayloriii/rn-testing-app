@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-# React Native Testing
-
-This code is part of the [Galaxies.dev React Native Testing Course](https://galaxies.dev/course/test-react-native-apps).
-
-[![Youtube](https://img.shields.io/static/v1?label=SimonGrimm&message=Subscribe&logo=YouTube&color=FF0000&style=for-the-badge)](https://www.youtube.com/@devsimon?sub_confirmation=1)
-
-[![Twitter Follow](https://img.shields.io/twitter/follow/schlimmson?color=1DA1F2&label=Followers&logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?&screen_name=schlimmson)
-=======
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
@@ -57,4 +48,3 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
->>>>>>> 3e8bae4 (Initial commit)

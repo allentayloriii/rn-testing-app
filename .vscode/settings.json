@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-  "java.configuration.updateBuildConfiguration": "automatic"
-}
-=======
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
     "source.organizeImports": "explicit",
@@ -11,4 +7,3 @@
   "java.configuration.updateBuildConfiguration": "automatic",
   "java.compile.nullAnalysis.mode": "automatic"
 }
->>>>>>> 3e8bae4 (Initial commit)
