@@ -7,6 +7,7 @@
     "source.fixAll": "explicit",
     "source.organizeImports": "explicit",
     "source.sortMembers": "explicit"
-  }
+  },
+  "java.configuration.updateBuildConfiguration": "automatic"
 }
 >>>>>>> 3e8bae4 (Initial commit)
