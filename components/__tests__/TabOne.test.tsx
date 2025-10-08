@@ -2,14 +2,14 @@ import TabOneScreen from "@/app/(tabs)";
 import { fireEvent, render, screen } from "@testing-library/react-native";
 
 describe("<TabOneScreen />", () => {
-  test("shows Galaxies Home title", () => {
+  test("shows Galaxies Feed title", () => {
     const { getByText } = render(<TabOneScreen />);
-    expect(getByText("Galaxies Home")).toBeTruthy();
+    expect(getByText("Galaxies Feed")).toBeTruthy();
   });
 
-  test("shows Galaxies Home title v2", () => {
+  test("shows Galaxies Feed title v2", () => {
     render(<TabOneScreen />);
-    const label = screen.getByText("Galaxies Home");
+    const label = screen.getByText("Galaxies Feed");
     expect(label).toBeTruthy();
   });
 
