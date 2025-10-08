@@ -1,14 +1,14 @@
-import GalacticCounter from '@/components/GalacticCounter';
-import { useState } from 'react';
-import { StyleSheet, View, Text, Image, TextInput, Button } from 'react-native';
+import GalacticCounter from "@/components/GalacticCounter";
+import { useState } from "react";
+import { Image, StyleSheet, Text, TextInput, View } from "react-native";
 
 export default function TabOneScreen() {
-  const [search, setSearch] = useState<string>('');
+  const [search, setSearch] = useState<string>("");
 
   return (
     <View style={styles.container} accessible>
       <Image
-        source={{ uri: 'https://galaxies.dev/img/logos/logo--blue.png' }}
+        source={{ uri: "https://galaxies.dev/img/logos/logo--blue.png" }}
         style={{ width: 200, height: 100 }}
         role="img"
         accessibilityLabel="logo"
@@ -16,15 +16,19 @@ export default function TabOneScreen() {
       />
       <Text style={styles.title}>Galaxies Feed</Text>
       <View style={styles.separator} testID="separator" />
-      <View style={{ flexDirection: 'row', marginHorizontal: 40 }}>
+      <View style={{ flexDirection: "row", marginHorizontal: 40 }}>
         <TextInput
           placeholder="Search galaxies"
-          style={{ padding: 10, backgroundColor: '#fff', flex: 1 }}
+          style={{ padding: 10, backgroundColor: "#fff", flex: 1 }}
           value={search}
           onChangeText={(text) => setSearch(text)}
         />
       </View>
-      {search !== '' && <Text style={{ fontSize: 16, marginTop: 20 }}>Searched for: {search}</Text>}
+      {search !== "" && (
+        <Text style={{ fontSize: 16, marginTop: 20 }}>
+          Searched for: {search}
+        </Text>
+      )}
       <GalacticCounter />
     </View>
   );
@@ -34,16 +38,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 40,
-    alignItems: 'center',
+    alignItems: "center",
   },
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   separator: {
     marginVertical: 30,
     height: 1,
-    backgroundColor: '#9d9d9d',
-    width: '80%',
+    backgroundColor: "#9d9d9d",
+    width: "80%",
   },
 });
