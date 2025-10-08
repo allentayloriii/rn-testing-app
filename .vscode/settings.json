@@ -1,3 +1,12 @@
 {
+<<<<<<< HEAD
   "java.configuration.updateBuildConfiguration": "automatic"
 }
+=======
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+    "source.sortMembers": "explicit"
+  }
+}
+>>>>>>> 3e8bae4 (Initial commit)
