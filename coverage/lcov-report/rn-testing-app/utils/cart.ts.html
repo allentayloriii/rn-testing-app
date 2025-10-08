@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">85.71% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/14</span>
+                <span class='fraction'>0/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">84.61% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/13</span>
+                <span class='fraction'>0/13</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -92,25 +92,25 @@
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -119,25 +119,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import AsyncStorage from "@react-native-async-storage/async-storage";
 &nbsp;
-const key = "cart";
+const key = <span class="cstat-no" title="statement not covered" >"cart";</span>
 &nbsp;
-const getCartSum = (items: any[]) =&gt; {
-  return items.reduce((acc, item) =&gt; acc + item.price, 0);
+const getCartSum = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(i</span>tems: any[]) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  return items.reduce(<span class="fstat-no" title="function not covered" >(a</span>cc, item) =&gt; <span class="cstat-no" title="statement not covered" >acc + item.price,</span> 0);</span>
 };
 &nbsp;
-const storeCart = async (cart: any) =&gt; {
-  try {
-    const jsonValue = JSON.stringify(cart);
-    await AsyncStorage.setItem(key, jsonValue);
+const storeCart = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync (cart: any) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  try {</span>
+    const jsonValue = <span class="cstat-no" title="statement not covered" >JSON.stringify(cart);</span>
+<span class="cstat-no" title="statement not covered" >    await AsyncStorage.setItem(key, jsonValue);</span>
   } catch (e) {
 <span class="cstat-no" title="statement not covered" >    console.error("Error storing cart", e);</span>
   }
 };
 &nbsp;
-const loadCart = async () =&gt; {
-  try {
-    const jsonValue = await AsyncStorage.getItem(key);
-    return jsonValue != null ? JSON.parse(jsonValue) : <span class="branch-1 cbranch-no" title="branch not covered" >[];</span>
+const loadCart = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  try {</span>
+    const jsonValue = <span class="cstat-no" title="statement not covered" >await AsyncStorage.getItem(key);</span>
+<span class="cstat-no" title="statement not covered" >    return jsonValue != null ? JSON.parse(jsonValue) : [];</span>
   } catch (e) {
 <span class="cstat-no" title="statement not covered" >    console.error("Error getting cart", e);</span>
   }
@@ -151,7 +151,7 @@ export { getCartSum, loadCart, storeCart };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-10-08T22:28:09.263Z
+                at 2025-10-08T22:44:22.182Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
