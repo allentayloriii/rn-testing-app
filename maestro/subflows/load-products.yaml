@@ -1,0 +1,4 @@
+appId: host.exp.Exponent
+---
+- tapOn: "Tab Two, tab, 2 of 2"
+- tapOn: "Load Products"

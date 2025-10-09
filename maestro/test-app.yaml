@@ -1,0 +1,7 @@
+appId: host.exp.Exponent
+---
+- runFlow: 
+    file: "subflows/load-products.yaml"
+- assertVisible:
+    id: "product-item"
+    index: 2

@@ -6,7 +6,7 @@ export default function TabOneScreen() {
   const [search, setSearch] = useState<string>("");
 
   return (
-    <View style={styles.container} accessible>
+    <View style={styles.container}>
       <Image
         source={{ uri: "https://galaxies.dev/img/logos/logo--blue.png" }}
         style={{ width: 200, height: 100 }}
