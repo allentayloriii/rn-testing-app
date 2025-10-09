@@ -1,5 +1,5 @@
+import GalacticCounter from "@/components/GalacticCounter";
 import { render, screen, userEvent } from "@testing-library/react-native";
-import GalacticCounter from "../GalacticCounter";
 
 describe("Galactic Counter", () => {
   test("Updates the counter", async () => {
